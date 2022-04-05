@@ -2,13 +2,13 @@ package pavel.kavaliuk.generative.singleton;
 
 public class Singleton {
 	private static Singleton instance;
-	private String value;
+	private final String value;
 
-	private Singleton(String value) {
+	private Singleton(final String value) {
 		this.value = value;
 	}
 
-	public static Singleton getInstance(String value) {
+	public static Singleton getInstance(final String value) {
 		if (instance == null) {
 			instance = new Singleton(value);
 		}
